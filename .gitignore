@@ -1,11 +1,19 @@
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
 
-*.py
-*.bat
-videos/Saajanji Ghar Aaye Full Video - Kuch Kuch Hota Hai｜Shah Rukh Khan,Kajol｜Alka Yagnik \[8XtXLVylOoU\].webm
+# Virtual environments
+venv/
+.env/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Ignore large or generated files
 *.webm
-*.pyc
-*.ipynb
-*.py
 *.pdf
-*.py
 movies.csv
