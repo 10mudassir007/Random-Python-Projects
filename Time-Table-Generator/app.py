@@ -18,7 +18,7 @@ Project structure
 
 import random
 
-from database import DEPARTMENTS_DB
+from database import DEPARTMENTS_DB, DATA_SOURCE
 from generator import generate_timetable
 from display import format_batch_timetable,  format_summary
 
@@ -32,6 +32,13 @@ def main():
     print("=" * 120 + "\n")
 
     print("  Generating timetable...\n")
+
+    # Show which data source is active
+    if DATA_SOURCE == "supabase":
+        print("  [OK] Connected to Supabase -- using live database.\n")
+    else:
+        print("  [!!] Supabase unavailable -- using hardcoded data.\n")
+
     timetable, warnings = generate_timetable()
 
     # ── Print warnings ───────────────────────────────────────────────────────
@@ -62,6 +69,6 @@ def main():
     print("  Done! Timetable generated successfully.")
     print("=" * 120 + "\n")
 
-
+    print(DATA_SOURCE)
 if __name__ == "__main__":
     main()
