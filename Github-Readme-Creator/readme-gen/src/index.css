@@ -1,0 +1,40 @@
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; }
+
+.output-inner-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.copy-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  border-top: 1px solid #eee; /* Light separator */
+  margin-top: 10px;
+}
+
+.copy-btn-icon-only {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 6px;
+  transition: background 0.2s;
+  color: #666;
+}
+
+.copy-btn-icon-only:hover {
+  background: #f0f0f0;
+}
+
+/* Ensure markdown text doesn't feel cramped */
+.markdown-content p {
+  margin-bottom: 1em;
+  line-height: 1.6;
+}
+
+.markdown-content li {
+  margin-bottom: 0.5em;
+}
